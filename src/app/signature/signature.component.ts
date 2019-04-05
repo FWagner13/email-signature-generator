@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class SignatureComponent implements OnInit {
 
   public profilePicture:object;
+  public profileInfo:object;
   
   constructor() { }
   
@@ -21,6 +22,11 @@ export class SignatureComponent implements OnInit {
     this.profilePicture = {
       src: 'https://www.neomind.com.br/fusion/assinatura/maria-agostini.jpg',
       size: this.getProfilePicSize()
+    }
+
+    this.profileInfo = {
+      name: 'MARIA EUGÊNIA AGOSTINI',
+      role: 'Analista de RH'
     }
   }
 

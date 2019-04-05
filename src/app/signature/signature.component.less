@@ -1,9 +1,8 @@
-@maxSize: 126px;
-
 div.main-container {
-    display: flex;
-    flex-direction: row;
-    height: @maxSize;
+    display: grid;
+    grid-template-columns: 136px 15px auto;
+    grid-template-rows: 126px;
+    width: 700px;
 
     div.profile-picture-container {
         img {
@@ -15,6 +14,50 @@ div.main-container {
     div.horizontal-divider {
         width: 5px; 
         background-color: #cc2d4d;
-        margin: 0 10px;
+    }
+
+    div.signature-info-container {
+        div.top-info {
+            padding-bottom: 6px;
+            border-bottom: 1px solid #38383a;
+            
+            div.top-container {
+                display: inline-flex;
+                justify-content: space-between;
+                width: 100%;
+                
+                div.name-container {
+                    span.name {
+                        color: #cc2c4e;
+                        font-size: 26px;
+                        font-family: Calibri, Arial ,sans-serif;
+                    }
+                }
+                
+                div.social-container {
+                    div.social-inner-container {
+                        display: grid;
+                        grid-template-columns: repeat(4, 44px);
+                        height: 100%;
+
+                        a {
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                        }
+                    }
+                }
+            }
+        }
+
+        div.bottom-container {
+            div.role-container {
+                span.role {
+                    font-size: 14px;
+                    color: #38383a;
+                    font-family: helvetica, Arial,sans-serif;
+                }
+            }
+        }
     }
 }
